@@ -1,0 +1,37 @@
+django-learning-journey/
+│
+├── 01-django-basics/
+│   ├── hello_django/              # first project
+│   └── README.md
+│
+├── 02-models-orm/
+│   ├── blog_project/              # blog app with models
+│   └── README.md
+│
+├── 03-auth-forms/
+│   ├── user_auth_project/         # login, register
+│   └── README.md
+│
+├── 04-rest-apis/
+│   ├── blog_api/                  # Django REST Framework API
+│   └── README.md
+│
+├── 05-advanced-django/
+│   ├── signals_middleware_cache/
+│   └── README.md
+│
+├── 06-production-deployment/
+│   ├── docker_compose/            # dockerized app
+│   └── README.md
+│
+├── 07-advanced-apis/
+│   ├── graphql_channels/          # GraphQL + WebSockets
+│   └── README.md
+│
+├── diagrams/                      # all learning diagrams
+│   ├── django-request-cycle.png
+│   ├── django-mvc.png
+│   └── django-orm.png
+│
+├── ROADMAP.md
+└── README.md
