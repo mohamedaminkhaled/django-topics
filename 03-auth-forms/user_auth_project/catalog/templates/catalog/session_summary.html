@@ -1,0 +1,14 @@
+<h2>Session Summary</h2>
+<p>Theme preference: {{ theme }}</p>
+<p>Session expires in (seconds): {{ expiry_age }}</p>
+
+<h3>Recently viewed items</h3>
+<ul>
+  {% for it in recent %}
+    <li><a href="{% url 'item_detail' it.pk %}">{{ it.name }}</a></li>
+  {% empty %}
+    <li>No items viewed yet</li>
+  {% endfor %}
+</ul>
+
+<p><a href="{% url 'catalog:item_detail' recent.0.pk %}">Go to last viewed</a> (if exists)</p>

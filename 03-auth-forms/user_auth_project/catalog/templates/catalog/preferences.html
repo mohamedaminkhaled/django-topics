@@ -1,0 +1,14 @@
+<h2>Preferences</h2>
+<form method="post">
+  {% csrf_token %}
+  <label>Theme:
+    <select name="theme">
+      <option value="light" {% if current == 'light' %}selected{% endif %}>Light</option>
+      <option value="dark" {% if current == 'dark' %}selected{% endif %}>Dark</option>
+    </select>
+  </label>
+  <button type="submit">Save</button>
+</form>
+
+<p>Current theme = {{ current }}</p>
+<p><a href="{% url 'session_summary' %}">See session summary</a></p>
