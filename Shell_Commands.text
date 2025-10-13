@@ -1,0 +1,39 @@
+■ Django Shell & Basic Commands — Developer Cheat Sheet
+
+■ Basic Django Commands
+• Create a new Django project: django-admin startproject project_name
+• Create a new Django app: python manage.py startapp app_name
+• Run development server: python manage.py runserver
+• Make database migrations: python manage.py makemigrations
+• Apply migrations: python manage.py migrate
+• Create superuser: python manage.py createsuperuser
+• Show all URLs: python manage.py show_urls (django-extensions) >>> pip install django-extensions
+• Collect static files: python manage.py collectstatic
+
+■ Django Shell Commands
+• Open Django shell: python manage.py shell
+• Open enhanced shell (auto-imports models): python manage.py shell_plus
+• Import settings: from django.conf import settings
+• Check DEBUG: settings.DEBUG
+• List installed apps: settings.INSTALLED_APPS
+
+■ Model & ORM Commands
+• Import model: from app.models import ModelName
+• List all: ModelName.objects.all()
+• Filter: ModelName.objects.filter(active=True)
+• Create: ModelName.objects.create(name='Test')
+• Update: obj = ModelName.objects.get(id=1); obj.name='New'; obj.save()
+• Delete: obj.delete()
+• Count: ModelName.objects.count()
+
+■ User & Auth
+• from django.contrib.auth.models import User
+• Create user: User.objects.create_user('mohamed', password='1234')
+• Authenticate: from django.contrib.auth import authenticate
+• u = authenticate(username='mohamed', password='1234')
+
+■ Sessions, URLs & Utilities
+• List sessions: from django.contrib.sessions.models import Session; Session.objects.all()
+• Reverse URL: from django.urls import reverse; reverse('app:view', args=[1])
+• Run migrations: from django.core.management import call_command; call_command('migrate')
+• Clear cache: from django.core.cache import cache; cache.clear()

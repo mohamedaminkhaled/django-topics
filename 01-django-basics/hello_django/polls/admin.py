@@ -12,7 +12,7 @@ class QuestionAdmin(admin.ModelAdmin):
 
 @admin.register(Person)
 class PersonAdmin(admin.ModelAdmin):
-    fields  = ["shirt_size", ("first_name", "last_name")]
+    fields = ["shirt_size", ("first_name", "last_name")]
     empty_value_display = "-empty-"
 
 # @admin.register(Question, Person)

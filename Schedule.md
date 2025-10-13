@@ -1,6 +1,6 @@
 📅 Suggested Schedule (8 Weeks)
 
-Week 1: Basics (project, apps, templates, views).
+Week 1: Basics (project, apps, templates, views). 
 
 Week 2: ORM + models + admin.
 
@@ -14,4 +14,4 @@ Week 7: Deployment (Docker, Gunicorn, Nginx).
 
 Week 8: GraphQL, Channels, SaaS architecture.
 
-👉 Daily practice: 2 hours coding + 30 min reading/docs.
+👉 Daily practice: 2~4 hours coding + reading/docs.
