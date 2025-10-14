@@ -1,6 +1,14 @@
 ■ Django Shell & Basic Commands — Developer Cheat Sheet
 
 ■ Basic Django Commands
+• Create the project directory
+  mkdir tutorial
+  cd tutorial
+
+• Create a virtual environment to isolate our package dependencies locally
+  python3 -m venv env
+  source env/bin/activate  # On Windows use `source venv/Scripts/activate`
+
 • Create a new Django project: django-admin startproject project_name
 • Create a new Django app: python manage.py startapp app_name
 • Run development server: python manage.py runserver
