@@ -1,0 +1,43 @@
+### 1. Test model signals
+
+```python
+from core.models import Book, Author
+a = Author.objects.create(name="Tolkien")
+b = Book.objects.create(title="LOTR", author=a)
+b.title = "Lord of The Rings"
+b.save()
+b.delete()
+```
+
+### 2. Test Many-to-Many
+
+```python
+from core.models import Tag
+t1 = Tag.objects.create(name="fantasy")
+b.tags.add(t1)
+b.tags.remove(t1)
+```
+
+### 3. Test custom signal
+
+```python
+from core.custom_signals import user_action_signal
+user_action_signal.send(sender=None, user="test", action="login")
+```
+
+### 4. Test request signals
+```python
+from django.core.signals import request_started, request_finished, got_request_exception
+
+request_started.send(sender=None, environ={})
+request_finished.send(sender=None)
+got_request_exception.send(sender=None, request=None)
+```
+### Way 2:
+```python
+from django.test import Client
+
+client = Client()
+response = client.get("/api/template/")
+client.get("/api/error/")  # A view that raises ValueError()
+```
