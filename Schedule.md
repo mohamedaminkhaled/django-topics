@@ -18,4 +18,4 @@ Week 8: GraphQL, Channels, SaaS architecture.
 
 👉 Daily practice: 2~4 hours coding + reading/docs.
 
-Done hours: 73:30 hr:min / 150 hr
+Done hours: 93:00 hr:min / 150 hr
